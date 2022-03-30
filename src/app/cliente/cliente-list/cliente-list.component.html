@@ -1,0 +1,45 @@
+<div class="container">
+    <app-deslogar></app-deslogar>
+    <app-logo></app-logo>
+    <div class="row mt-3">
+        <div class="col-8 col-md-8 col-lg-8">
+            <h2 class="mt-3">Clientes</h2>
+        </div>
+        <div class="col-4 col-md-4 col-lg-4">
+            <h4 class="mt-3">Novo Cliente <i class="bi bi-plus-circle" routerLink="/cliente-register"></i></h4>
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="cadastroDeletado ==true">
+          Cadastro de Cliente Deletado com sucesso!
+         </div>
+         <div class="alert alert-success" role="alert" *ngIf="clienteAtualizadoSucesso ==true">
+          Cadastro de Cliente Atualizado com sucesso!
+         </div>
+    </div>
+    <table class="table mt-5 "  >
+     
+        <thead>
+          <tr>
+            <th scope="col-1">#</th>
+            <th scope="col-3">Nome</th>
+            <th scope="col-3">CPF</th>
+            <th scope="col-3">CNPJ</th>
+            <th scope="col-3">Endereço Principal</th>
+            <th scope="col-2">Telefone</th>
+            <th><button (click)="atualizarCliente()">Atualizar</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <th scope="row">{{cliente.id}}</th>
+            <td> <input type="text" value="{{cliente.nome}}" style="width: 100%;" name="nome" [disabled]="disabled" [(ngModel)]="cliente.nome"></td>
+            <td>{{cliente.cpf}}</td>
+            <td>{{cliente.cnpj}}</td>
+            <td>{{cliente.endereco}}</td>
+            <td>{{cliente.telefone}}</td>
+           <button (click)="DeleteCliente(cliente)">Excluir</button>           
+           <button *ngIf="botaoSalvar==true" (click)="SalvarAtualizacaoCliente(cliente)">Salvar</button>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<router-outlet></router-outlet>

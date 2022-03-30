@@ -1,0 +1,21 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.formss{
+    display: flex;
+    justify-content: left;
+}

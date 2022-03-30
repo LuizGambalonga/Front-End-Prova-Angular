@@ -1,0 +1,28 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: #131AF9;
+    opacity: 0.9;
+    color: white;
+}
+label{
+    color: white;
+}
+.login{
+    width: 130px;
+    font-size: 20px;
+}
+.logo{
+    text-align: center;
+}

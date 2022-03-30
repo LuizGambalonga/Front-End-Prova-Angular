@@ -1,0 +1,33 @@
+<div class="container">
+   <app-logo></app-logo>
+    <div class="form">
+        <form >
+            <div class="col-8 col-mb-6 col-lg-6">
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="nome">Nome:</label>
+                    <input type="password" id="nome" class="form-control" placeholder="Informe seu nome."/>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" class="form-control" placeholder="Informe o seu nome de usuario(a)."/>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="senha">Senha:</label>
+                    <input type="password" id="senha" class="form-control" placeholder="Informe sua senha."/>
+                  </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-4 col-lg-5 col-mb-5">
+                    <button type="button" class="btn btn-primary btn-block" routerLink="/login" >Cadastrar</button>
+                </div>
+                <div class="col-4 col-lg-7 col-mb-7">
+                    <button type="button" class="btn btn-primary btn-block" routerLink="/login">Voltar ao Login</button>
+                </div>
+               
+              </div>
+          </form>   
+    </div>
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>
